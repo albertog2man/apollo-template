@@ -1,0 +1,18 @@
+# om namah shivay
+
+# see https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml for more info
+
+service: apollo-template
+runtime: nodejs
+env: flex
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10 
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 20
+  cool_down_period_sec: 60
+beta_settings:
+  cloud_sql_instances: 
+
